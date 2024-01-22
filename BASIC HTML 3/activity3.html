@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+
+        <title>Journal Subscription</title> 
+        <style> 
+            body { 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                font-weight: bold; 
+                height: 100%;
+                margin:0;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                background-size: cover;
+                color: #1a507d;
+                padding: 10px;
+                
+            } 
+
+            form { 
+                display: grid; 
+                gap: 10px; 
+                width: 500px; 
+                height: 100%;
+                background-color: #01df76;
+                padding: 15px;
+                box-sizing: border-box;    
+            } 
+
+            label { 
+                display: block; text-align: center; 
+            }
+
+            input[type="submit"] {
+                 width: 100%; 
+                }
+
+            input[type="checkbox"]{
+                margin-bottom:5px;
+            }
+            
+            input{
+                margin-bottom:10px;
+            }
+
+            input[type="url"],input[id="student"],input[type="range"]
+            {
+                margin-bottom:0px;
+            }
+            
+
+            output{
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+        </style> 
+    </head>
+    <body background="C:\Users\Akhil\Pictures\activity3_bg.avif"> 
+        <form> 
+            <label for="start-date">Starting Date</label> 
+            <input type="date" id="start-date" name="start-date" required>
+            <label for="duration">Subscription Duration (in years)</label>
+            <input type="range" id="duration" name="duration" min="1" max="10" oninput="duration.nextElementSibling.value = duration.value;" >
+            <output>6</output>
+
+            <label>Occupation:</label>
+            <div><input type="radio" id="student" name="occupation" value="student" required>Student</div>
+            <div><input type="radio" id="professional" name="occupation" value="professional">Professional</div>
+            
+
+            <label>Journal Title</label>
+            <div><input type="checkbox" id="occupation1" name="occupation1">The Journey Within</div>
+            <div><input type="checkbox" id="occupation2" name="occupation2">My Path to Happiness</div>
+            <div><input type="checkbox" id="occupation3" name="occupation3">A Life of Purpose</div>
+            <div><input type="checkbox" id="occupation4" name="occupation4">A Light in the Darkness</div>
+            <div><input type="checkbox" id="occupation1" name="occupation1">The Power of Positivity</div>
+            </select>
+
+            <label for="subscriptions">Number of Subscriptions:</label>
+            <input type="number" id="subscriptions" name="subscriptions" min="10" max="200" required>
+
+            <label for="website">Website URL:</label>
+            <input type="url" id="website" name="website" pattern="https?://.+" required>
+
+            <input type="submit" value="Subscribe">
+        </form>
+    </body> 
+</html>
