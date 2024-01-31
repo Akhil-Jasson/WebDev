@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"> 
+        <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+        <style>
+            body{
+            display:flex;
+            background-color: black;
+            background-image: url("file:///C:/Users/Akhil/Pictures/activity3.jpg");
+            }
+            .left{
+                flex:4;
+            }
+            .right{
+                flex:6;
+            }
+            h1{
+                font-size: 200px;
+                color: rgb(75, 75, 251);
+                padding-top: 30px;
+                font-family: 'Oswald', serif;
+                padding-left:50px;
+            }
+            form{
+                display:grid;
+                box-sizing: border-box;
+                height:80%;
+                margin-right:100px;
+                margin-top:5%;
+                border: 5px black solid ;
+                padding: 10px;
+                background-color: white;
+                margin-left: 50px;
+                padding-left:90px;
+                padding-bottom: 30px; 
+                background-color: rgb(75, 75, 251);
+                color:white
+
+            
+            }
+            input {
+                height:30px;
+                margin-top:-30px;
+                width:80%;
+                margin-left:5%;
+            }
+            textarea{
+                width:80%;
+                margin-top:-45px;
+                margin-left:5%;
+            }
+            label {
+                margin-top: -20px;
+                margin-left: -1%;   
+                font-family: 'Oswald', serif;
+                font-weight: bold;
+
+            }
+            .top {
+                margin-top:10px;
+            }
+            .first{
+                margin-top:30%;
+                margin-left:-450px;
+            }
+            .two{
+                margin-top:30%;
+                margin-left:-300px;
+            }
+
+            button {
+                width: 30%;
+                height: 40px;
+                margin-left: 150px;
+                margin-bottom:-40px;
+                background-color:rgb(75, 75, 251);
+                color:white;
+
+            }
+            textarea {
+                margin-bottom:10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 class="left">Contact</h1>
+        <a class="left first" href="https://www.linkedin.com/in/akhil-jasson-inian-618113247/"><img src="file:///C:/Users/Akhil/Pictures/linkedin_blue.png"></a>
+        <a class="left two" href="https://github.com/Akhil-Jasson"><img src="file:///C:/Users/Akhil/Pictures/github.png"></a>
+        <a class="left two" href="https://www.instagram.com/?hl=en"><img src="file:///C:/Users/Akhil/Pictures/instagram.png"></a>
+        <a class="left two" href="https://in.pinterest.com/"><img src="file:///C:/Users/Akhil/Pictures/pinterest.png"></a> 
+
+        <form class="right">
+            <label for="name " class="top">Name</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email ID</label>
+            <input type="text" id="email" name="email">
+            <label for="number">Phone Number</label>
+            <input type="text" id="number" name="number">
+            <label for="message">Message</label>
+            <textarea id="textbox" name="textbox"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
