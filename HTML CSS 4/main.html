@@ -1,0 +1,141 @@
+<html>
+<head>
+  <title>Your Portfolio</title>
+  <style>
+    body 
+	{
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    header
+	{
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav 
+	{
+      display: flex;
+      justify-content: space-around;
+      background-color: #555;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      position: relative;
+    }
+
+    nav a:hover::after 
+	{
+      content: attr(data-tooltip);
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    nav a:hover::after 
+	{
+      opacity: 1;
+    }
+
+    section 
+	{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .project 
+	{
+      flex: 0 0 30%; 
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    footer 
+	{
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .news-updates 
+	{
+      background-color: #333;
+      color: white;
+      text-align: right;
+      padding: 20px;
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 200px;
+      box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .news-updates:hover 
+	{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MY WEB</h1>
+  </header>
+
+  <nav>
+    <a href="#home" data-tooltip="Home">Home</a>
+    <a href="#about" data-tooltip="About">About</a>
+    <a href="#projects" data-tooltip="Projects">Projects</a>
+    <a href="#contact" data-tooltip="Contact">Contact</a>
+    <a href="#resume" data-tooltip="Resume">Resume</a>
+  </nav>
+
+  <section>
+    <div class="project">Project 1</div>
+    <div class="project">Project 2</div>
+    <div class="project">Project 3</div>
+    <div class="project">Project 4</div>
+    <div class="project">Project 5</div>
+  </section>
+
+  <div class="news-updates">
+    <p>News Updates</p>
+    <p>CLICK TO REGISTER FOR AN EVENT</p>
+  </div>
+
+  <footer>
+    &copy; 2024 Your Name - Portfolio
+  </footer>
+
+</body>
+</html>
