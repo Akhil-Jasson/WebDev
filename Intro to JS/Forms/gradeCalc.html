@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Grade Calculator</title>
+    <style>
+        form {
+            margin: 50px;
+            margin-left:35%;
+            border:5px black solid;
+            padding-left: 30px;
+            padding-bottom: 50px;
+            margin-right: 35%;
+        }
+        h1{
+            margin-top:55px;
+            
+        }
+
+        #submit {
+            margin-left:40%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form id="gradeForm">
+        <h1 class="title">Absolute Grade Calculator</h1>
+        <label name="da">Digital Assignment - 1: </label>
+        <input type="number" id="da" name="da" required><br><br>
+        <label name="q1">Quiz - 1: </label>
+        <input type="number" id="q1" name="q1" required><br><br>
+        <label name="q2">Quiz - 2: </label>
+        <input type="number" id="q2" name="q2" required><br><br>
+        <label name="cat1">CAT - 1: </label>
+        <input type="number" id="cat1" name="cat1" required><br><br>
+        <label name="cat2">CAT - 2: </label>
+        <input type="number" id="cat2" name="cat2" required><br><br>
+        <label name="fat">FAT: </label>
+        <input type="number" id="fat" name="fat"><br><br>
+        <input type="submit" id="submit" name="submit">
+        <p id="result"></p>
+    </form>
+
+    
+
+    <script>
+        document.getElementById("gradeForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            var da = parseInt(document.getElementById("da").value);
+            var q1 = parseInt(document.getElementById("q1").value);
+            var q2 = parseInt(document.getElementById("q2").value);
+            var cat1 = parseInt(document.getElementById("cat1").value);
+            var cat2 = parseInt(document.getElementById("cat2").value);
+            var fat = parseInt(document.getElementById("fat").value);
+    
+            var total = da + q1 + q2 + cat1 + cat2 + fat;
+            var message = "";
+    
+            if(total >= 90)
+            {
+                message = "S Grade!";
+            } 
+            else if(total >= 80) 
+            {
+                message = "A Grade!";
+            } 
+            else if(total >= 70) 
+            {
+                message = "B Grade";
+            } 
+            else if(total >= 60) 
+            {
+                message = "C Grade";
+            } 
+            else if(total >= 55) 
+            {
+                message = "D Grade";
+            } 
+            else if(total >= 50) 
+            {
+                message = "E Grade";
+            } 
+            else 
+            {
+                message = "F Grade";
+            }
+    
+            document.getElementById("result").innerHTML = message;
+        });
+    </script>
+    
+
+</body>
+</html>
